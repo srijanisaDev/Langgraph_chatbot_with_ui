@@ -98,7 +98,9 @@ if user_input:
                 {'messages': [HumanMessage(content=user_input)]},
                 config= CONFIG,
                 stream_mode= 'messages'
+                
             )
         )
 
     st.session_state['message_history'].append({'role': 'assistant', 'content': ai_message})
+    st.session_state['message_history'].append({'role' : 'assistant' , 'content' : ai_message})
